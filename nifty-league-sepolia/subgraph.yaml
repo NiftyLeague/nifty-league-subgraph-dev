@@ -1,6 +1,6 @@
-specVersion: 0.0.4
-description: NiftyDegen Sepolia NFTs from NiftyLeague
-repository: https://github.com/NiftyLeague/nifty-league-subgraph-dev.git
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
 schema:
   file: ./schema.graphql
 dataSources:
@@ -8,11 +8,12 @@ dataSources:
     name: NiftyDegen
     network: sepolia
     source:
-      address: '0x6adFF2BB4A465A885425e3bd4304A78BB659B12e'
+      address: "0x6adFF2BB4A465A885425e3bd4304A78BB659B12e"
       abi: NiftyDegen
+      startBlock: 5541380
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.6
+      apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
         - Approval

@@ -1,7 +1,7 @@
 {
-  "goerli": {
+  "sepolia": {
     "NiftyDegen": {
-      "address": "0x08d49340c8d3bfe1cead341d8597bd07b959eaab"
+      "address": "0x6adFF2BB4A465A885425e3bd4304A78BB659B12e"
     }
   }
 }
