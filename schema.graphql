@@ -1,12 +1,12 @@
-type Contract @entity {
-  id: ID!
+type Contract @entity(immutable: false) {
+  id: Bytes!
   address: Bytes!
   totalSupply: BigInt!
   removedTraits: [Int!]
 }
 
-type Character @entity {
-  id: ID!
+type Character @entity(immutable: false) {
+  id: Bytes!
   tokenId: BigInt!
   owner: Owner!
   name: String
@@ -16,8 +16,16 @@ type Character @entity {
   traits: TraitMap!
 }
 
-type TraitMap @entity {
-  id: ID!
+type Owner @entity(immutable: false) {
+  id: Bytes!
+  address: Bytes!
+  createdAt: BigInt!
+  characters: [Character!] @derivedFrom(field: "owner")
+  characterCount: Int!
+}
+
+type TraitMap @entity(immutable: true) {
+  id: Bytes!
   tokenId: BigInt!
   character: Character! @derivedFrom(field: "traits")
   tribe: Int!
@@ -43,14 +51,6 @@ type TraitMap @entity {
   leftItem: Int!
   rightItem: Int!
   background: Int!
-}
-
-type Owner @entity {
-  id: ID!
-  address: Bytes!
-  createdAt: BigInt!
-  characters: [Character!] @derivedFrom(field: "owner")
-  characterCount: Int!
 }
 
 type Approval @entity(immutable: true) {

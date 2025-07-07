@@ -1,4 +1,4 @@
-specVersion: 1.0.0
+specVersion: 1.3.0
 description: NiftyDegen Sepolia NFTs from NiftyLeague
 repository: https://github.com/NiftyLeague/nifty-league-subgraph-dev.git
 indexerHints:
@@ -15,7 +15,7 @@ dataSources:
       startBlock: 5541380
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.7
+      apiVersion: 0.0.9
       language: wasm/assemblyscript
       entities:
         - Approval
