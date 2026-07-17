@@ -4,6 +4,7 @@
 > Any AI agent (Hermes / Codex / opencode / Kilo) working here MUST follow this. No guessing.
 
 ## Global Constitution (locked — applies to ALL ~/Developer repos)
+
 - **TypeScript (web)** → Bun. Next.js/React dominant. Do NOT rewrite web in Rust+WASM (tooling not ready).
 - **Python** → uv preferred; BUT use the repo's actual PM if it's Poetry/conda. pip banned for new agents.
 - **Rust** → cargo. Aspirational default for CLI/systems tools where crates exist. Otherwise leave `# TODO(rust-migration)`.
@@ -29,18 +30,18 @@
 
 ## Commands
 
-| Script | Actual command |
-|---|---|
-| `bun run codegen` | `graph codegen` — generate AssemblyScript types from schema + ABIs |
-| `bun run build` | `graph build` — compile subgraph to WASM |
-| `bun run format` | `prettier --write .` |
-| `bun run format:check` | `prettier --check .` |
-| `bun run lint` | `eslint . --max-warnings=0` |
-| `bun run deploy` | `graph deploy --node https://api.studio.thegraph.com/deploy/ nifty-league-sepolia` |
-| `bun run create-local` | `graph create --node http://localhost:8020/ nifty-league-sepolia` |
-| `bun run remove-local` | `graph remove --node http://localhost:8020/ nifty-league-sepolia` |
-| `bun run deploy-local` | `graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 nifty-league-sepolia` |
-| `bun run test` | `graph test --version 0.6.0` — run Matchstick test suite |
+| Script                  | Actual command                                                                                     |
+| ----------------------- | -------------------------------------------------------------------------------------------------- |
+| `bun run codegen`       | `graph codegen` — generate AssemblyScript types from schema + ABIs                                 |
+| `bun run build`         | `graph build` — compile subgraph to WASM                                                           |
+| `bun run format`        | `prettier --write .`                                                                               |
+| `bun run format:check`  | `prettier --check .`                                                                               |
+| `bun run lint`          | `eslint . --max-warnings=0`                                                                        |
+| `bun run deploy`        | `graph deploy --node https://api.studio.thegraph.com/deploy/ nifty-league-sepolia`                 |
+| `bun run create-local`  | `graph create --node http://localhost:8020/ nifty-league-sepolia`                                  |
+| `bun run remove-local`  | `graph remove --node http://localhost:8020/ nifty-league-sepolia`                                  |
+| `bun run deploy-local`  | `graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 nifty-league-sepolia`     |
+| `bun run test`          | `graph test --version 0.6.0` — run Matchstick test suite                                           |
 | `bun run test:coverage` | `node scripts/check-coverage.mjs` — runs tests with `--coverage` and enforces a coverage threshold |
 
 ## Entry Points
