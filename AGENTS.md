@@ -70,4 +70,3 @@
 8. **Local dev node** — `create-local`/`remove-local`/`deploy-local` point at `localhost:8020` (Graph node) and `localhost:5001` (IPFS). Requires a local Graph node running.
 9. **Immutable event entities vs. mutable domain entities** — `Approval`, `Transfer`, `Paused`, etc. are `immutable: true`; `Character`, `Owner`, `Contract` are `immutable: false`. `TraitMap` is `immutable: true` (created once per token).
 10. **No README** — There is no `README.md` in this repo. The `subgraph.yaml` `description` field says "NiftyDegen Sepolia NFTs from NiftyLeague".
-
